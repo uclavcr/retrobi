@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <ul wicket:id="task">
+  
+    <li class="status" wicket:id="label.name">FIXME</li>
+    
+    <wicket:enclosure child="label.status">
+    
+      <li>
+        <wicket:container wicket:id="image"><img src="icon_wait.gif" alt="(probíhá)" /></wicket:container>
+        <wicket:container wicket:id="label.status">FIXME</wicket:container>
+      </li>
+      
+      <li>
+        <a wicket:id="link.refresh">Obnovit</a> / <a wicket:id="link.stop_active">Zrušit úlohu</a>
+      </li>
+      
+    </wicket:enclosure>
+  </ul>
+  
+</wicket:panel>
+</html>

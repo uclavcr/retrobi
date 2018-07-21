@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <wicket:container wicket:id="list.card">
+    <div wicket:id="list.item.card" class="card">FIXME</div>
+  </wicket:container>
+  
+  <p wicket:id="wrap.empty">Seznam lístků je prázdný.</p>
+  
+  <wicket:enclosure child="table.card">
+    <table>
+  
+      <tr>
+        <th>Pořadí</th>
+        <th colspan="3">Pozice v katalogu</th>
+        <th>OCR</th>
+        <th>Přepis OCR</th>
+        <th>Segmentace</th>
+        <th>Obrázky</th>
+      </tr>
+      
+      <tr wicket:id="table.card">
+        <td><a wicket:id="link"><wicket:container wicket:id="label">FIXME</wicket:container></a></td>
+        <td wicket:id="label.catalog">FIXME</td>
+        <td wicket:id="label.batch">FIXME</td>
+        <td wicket:id="label.number">FIXME</td>
+        <td wicket:id="label.ocr.original">FIXME</td>
+        <td wicket:id="label.ocr.fixed">FIXME</td>
+        <td wicket:id="label.segmentation">FIXME</td>
+        <td wicket:id="label.images">FIXME</td>
+      </tr>
+      
+    </table>
+  </wicket:enclosure>
+    
+  <wicket:container wicket:id="table.sum">
+    <table>
+      <tr>
+        <th colspan="3">Zobrazeno lístků:</th>
+        <td colspan="5" wicket:id="label.sum.all">FIXME</td>
+      </tr>
+      <tr>
+        <th colspan="3">Z toho má OCR:</th>
+        <td colspan="5" wicket:id="label.sum.ocr">FIXME</td>
+      </tr>
+      <tr>
+        <th colspan="3">Z toho má přepis OCR:</th>
+        <td colspan="5" wicket:id="label.sum.ocr_fix">FIXME</td>
+      </tr>
+      <tr>
+        <th colspan="3">Z toho má segmentaci:</th>
+        <td colspan="5" wicket:id="label.sum.segments">FIXME</td>
+      </tr>
+      <tr>
+        <th colspan="3">Počet stránek:</th>
+        <td colspan="5" wicket:id="label.sum.images">FIXME</td>
+      </tr>
+    </table>
+  </wicket:container>
+    
+</wicket:panel>
+</html>

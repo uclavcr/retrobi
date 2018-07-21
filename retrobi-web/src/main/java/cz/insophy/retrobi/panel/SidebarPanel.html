@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <div class="fixed">
+    <div id="ucl">
+      <a href="http://ucl.cas.cz/" title="Ústav pro českou literaturu AV ČR, v. v. i."><img src="ucl.png" alt="Ústav pro českou literaturu AV ČR, v. v. i." /></a>
+    </div>
+    
+    <div class="box1">
+      <div class="title"><p>Funkce</p></div>
+      <div class="inside">
+        <ul>
+          <li><img src="icon_catalog.png" alt="" /> <a wicket:id="link.catalog"><em>Katalog</em></a></li>
+          <li><img src="icon_search.png" alt="" /> <a wicket:id="link.search"><em>Vyhledávání</em></a></li>
+          <li><img src="icon_basket.png" alt="" /> <a wicket:id="link.basket"><em>Schránka</em></a> = <small wicket:id="label.basket">FIXME</small></li>
+          <li><img src="icon_stats.png" alt="" /> <a wicket:id="link.stats">Statistiky</a></li>
+          <li><img src="icon_help.png" alt="" /> <a wicket:id="link.help">Nápověda</a></li>
+          <li><img src="icon_about.png" alt="" /> <a wicket:id="link.about">O katalogu</a></li>
+          <wicket:enclosure child="link.admin">
+            <li><img src="icon_lock.png" alt="" /> <a wicket:id="link.admin"><em>Správa</em></a></li>
+          </wicket:enclosure>
+        </ul>
+      </div>
+    </div>
+    
+    <wicket:enclosure child="taskPanel">
+      <div class="box1">
+        <div class="title"><p>Úlohy</p></div>
+        <div class="inside">
+          <div wicket:id="taskPanel">FIXME</div>
+        </div>
+      </div>
+    </wicket:enclosure>
+    
+    <div class="box2">
+      <div class="title"><p>Kontakt</p></div>
+      <div class="inside">
+        <div wicket:id="footerPanel">FIXME</div>
+      </div>
+    </div>
+    
+  </div>
+  
+</wicket:panel>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <form wicket:id="loginForm">
+    <p>
+      <label>Login: <input wicket:id="login" type="text" size="12" class="login" /></label>
+      <label>Heslo: <input wicket:id="password" type="password" size="12" class="login" /></label>
+      <input type="submit" value="Přihlásit se" />
+      <a wicket:id="link.register" title="Založte si uživatelský profil v systému Retrobi">Registrace</a>
+      <a wicket:id="link.forget" title="Podejte si žádost o zaslání nového hesla na e-mail">Zapomenuté heslo</a>
+    </p>
+  </form>
+  
+  <form wicket:id="logoutForm">
+    <p>
+      <strong wicket:id="label.name">FIXME</strong>
+      (role: <wicket:container wicket:id="label.role">FIXME</wicket:container>)
+      <input type="submit" value="Odhlásit se" />
+      <a wicket:id="link.profile" title="Upravte si svůj uživatelský profil">Upravit profil</a>
+    </p>
+  </form>
+  
+</wicket:panel>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <h2>Systémové statistiky</h2>
+  
+  <h3>Počet lístků</h3>
+  
+  <wicket:container wicket:id="text.card_count">FIXME</wicket:container>
+  
+  <table>
+  
+    <tr>
+      <th>Stav lístku</th>
+      <th>Počet lístků</th>
+    </tr>
+    
+    <tr wicket:id="card_count.list">
+      <td wicket:id="label.state">FIXME</td>
+      <td wicket:id="label.count">FIXME</td>
+    </tr>
+    
+    <tr>
+      <td><em>Celkem</em></td>
+      <td><em wicket:id="card_count.total">FIXME</em></td>
+    </tr>
+    
+  </table>
+  
+  <h3>Počet obrázků</h3>
+  
+  <wicket:container wicket:id="text.image_count">FIXME</wicket:container>
+  
+  <table>
+  
+    <tr>
+      <th>Stránky</th>
+      <th wicket:id="image_count.header.list"><wicket:container wicket:id="label">FIXME</wicket:container></th>
+      <th><em>Celkem</em></th>
+    </tr>
+    
+    <tr wicket:id="image_count.body.list">
+      <td wicket:id="label.images">FIXME</td>
+      <td wicket:id="list"><wicket:container wicket:id="label">FIXME</wicket:container></td>
+      <td><em wicket:id="label.total">FIXME</em></td>
+    </tr>
+    
+    <tr>
+      <td><em>Celkem</em></td>
+      <td wicket:id="image_count.footer.list"><em wicket:id="label">FIXME</em></td>
+      <td><em wicket:id="image_count.footer.total">FIXME</em></td>
+    </tr>
+    
+  </table>
+  
+  <h3>Rejstřík</h3>
+  
+  <wicket:container wicket:id="text.values">FIXME</wicket:container>
+  
+  <form wicket:id="values.form">
+    <p>
+      <select wicket:id="select" size="1">FIXME</select>
+      <input type="submit" value="Zobrazit" />
+    </p>
+  </form>
+  
+  <table>
+  
+    <tr>
+      <th>Hodnota</th>
+      <th>Počet lístků</th>
+    </tr>
+  
+    <tr wicket:id="values.list">
+      <td wicket:id="label.value">FIXME</td>
+      <td wicket:id="label.count">FIXME</td>
+    </tr>
+    
+    <tr>
+      <td><em>Celkem</em></td>
+      <td><em wicket:id="values.sum">FIXME</em></td>
+    </tr>
+    
+  </table>
+  
+</wicket:extend>
+</html>

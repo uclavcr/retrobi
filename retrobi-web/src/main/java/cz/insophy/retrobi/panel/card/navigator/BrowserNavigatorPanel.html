@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+  <wicket:extend>
+  
+    <table class="navigator">
+    
+      <wicket:container wicket:id="wrap.basket">        
+        <tr>
+          <th class="w15">
+            <p>Schránka:</p>
+          </th>
+          <td class="w85" colspan="4">
+            <form wicket:id="form.basket">
+              <p class="centered">
+                <select wicket:id="select.source">FIXME</select> 
+                <wicket:enclosure child="input.from">
+                  <input wicket:id="input.from" size="3" maxlength="6" /> až 
+                  <input wicket:id="input.to" size="3" maxlength="6" />
+                </wicket:enclosure> 
+                <input wicket:id="submit.add" type="submit" value="Přidat do schránky" /> 
+                <input wicket:id="submit.remove" type="submit" value="Vyjmout ze schránky" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </wicket:container>
+        
+      <wicket:container wicket:id="wrap.letter">
+        <tr>
+          <th colspan="2"><a wicket:id="link.letter.p"><img src="icon_left.png" alt="&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th>
+            <form wicket:id="form.skip">
+              <p class="centered">
+                <select wicket:id="select.catalog">FIXME</select> 
+                <select wicket:id="select.letter">FIXME</select> 
+                <input type="submit" value="Přejít" />
+              </p>
+            </form>
+          </th>
+          <th colspan="2">&nbsp;<a wicket:id="link.letter.n"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_right.png" alt="&gt;" /></a></th>
+        </tr>
+      </wicket:container>
+        
+      
+      <tr>
+        <th colspan="2" class="w30"><a wicket:id="link.batch.p"><img src="icon_left.png" alt="&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+        <th class="w40 marked"><a wicket:id="link.batch"><wicket:container wicket:id="label">FIXME</wicket:container> </a> (<wicket:container wicket:id="label.batch.size">FIXME</wicket:container>)&nbsp;</th>
+        <th colspan="2" class="w30">&nbsp;<a wicket:id="link.batch.n"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_right.png" alt="&gt;" /></a></th>
+      </tr>
+      
+      <wicket:container wicket:id="wrap.pager">
+        <tr> 
+          <th class="w15 marked"><a wicket:id="link.first"><img src="icon_first.png" alt="&lt;&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w15 marked"><a wicket:id="link.left"><img src="icon_left.png" alt="&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w40 marked">&nbsp;<a wicket:id="link.up"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_up.png" alt="^" /></a>&nbsp;</th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.right"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_right.png" alt="&gt;" /></a></th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.last"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_last.png" alt="&gt;&gt;" /></a></th>
+        </tr>
+      </wicket:container>
+    
+    </table>
+    
+  </wicket:extend>
+</wicket:panel>
+</html>

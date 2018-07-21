@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <table class="navigator" wicket:id="wrap.table">
+  
+    <wicket:container wicket:id="wrap.header">
+      <tr class="head">
+        <th class="w20 caption"><big><a wicket:id="link.head"><wicket:container wicket:id="label.name">FIXME</wicket:container></a></big></th>
+        <th class="w70"><h2 wicket:id="label.title">FIXME</h2></th>
+        <th class="w5"><a wicket:id="link.help" title="Nápověda"><img src="icon_help32.png" alt="" /></a></th>
+        <th class="w5">
+          <a wicket:id="link.hide" title="Kompaktní režim zobrazení"><img src="icon_hide32.png" alt="" /></a>
+          <a wicket:id="link.show" title="Plný režim zobrazení"><img src="icon_show32.png" alt="" /></a>
+        </th>
+      </tr>
+    </wicket:container>
+  
+    <wicket:container wicket:id="wrap.settings">
+      <tr>
+        <td colspan="3">
+          <form wicket:id="form.settings">
+            <table id="viewsetup">  
+              <tr>
+                <th>Grafické nastavení:</th>
+                <td><select wicket:id="select.mode">FIXME</select></td>
+                <th>Počet lístků na&nbsp;stránku:</th>
+                <td><select wicket:id="select.step">FIXME</select></td>
+                <td><input type="submit" value="OK" /></td>
+              </tr>
+            </table>  
+          </form>
+        </td>
+        <td><a href="javascript:window.print();" title="Tisk"><img src="icon_print32.png" alt="" /></a></td>
+      </tr>
+    </wicket:container>
+    
+  </table>
+    
+  <wicket:child />
+    
+</wicket:panel>
+</html>

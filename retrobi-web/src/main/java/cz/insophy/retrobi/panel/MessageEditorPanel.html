@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+  
+  <form wicket:id="form">
+    <table>
+      <tr>
+        <th>
+          <p>Připojený&nbsp;lístek:</p>
+        </th>
+        <td>
+          <p><strong wicket:id="label.ref_card">FIXME</strong></p>
+          <p><a wicket:id="link.card">Zpět na lístek</a></p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <p>Připojené&nbsp;číslo&nbsp;stránky:</p>
+        </th>
+        <td>
+          <p><strong wicket:id="label.ref_page">FIXME</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <p>Typ&nbsp;zprávy:</p>
+        </th>
+        <td>
+          <p><select wicket:id="input.type">FIXME</select></p>
+        </td>
+      </tr>
+      <wicket:enclosure>
+        <tr>
+          <th>
+            <p>Kontrolní&nbsp;otázka:</p>
+          </th>
+          <td>
+            <p>Jaký je aktuální rok v ČR? <input wicket:id="input.captcha" size="5" maxlength="8" /></p>
+          </td>
+        </tr>
+      </wicket:enclosure>
+      <tr>
+        <th>
+          <p>Dodatečné&nbsp;informace:</p>
+        </th>
+        <td>
+          <p><textarea wicket:id="input.text" rows="5" cols="50">FIXME</textarea></p>
+          <p>Pokud můžete, přidejte prosím podrobnější popis - nejlépe očekávané chování aplikace a její skutečné chování, včetně případných chybových hlášení.</p>
+        </td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>
+          <p><input type="submit" value="Odeslat" /></p>
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+</wicket:panel>
+
+</html>

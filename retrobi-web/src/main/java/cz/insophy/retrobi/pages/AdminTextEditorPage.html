@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <h2>Úprava textu</h2>
+  
+  <p>Upravujete text: <strong wicket:id="label.name">FIXME</strong> <wicket:container wicket:id="label.html"> (<em>formát = XHTML</em>)</wicket:container></p>
+  
+  <form wicket:id="form">
+    <p><textarea wicket:id="editor" rows="20" cols="50" class="fullsize">FIXME</textarea></p>
+    <p><input type="submit" value="Uložit změny" /></p>
+  </form>
+  
+  <h3>Dostupné tagy</h3>
+  
+  <p>
+    <wicket:container wicket:id="list.tag"><wicket:container wicket:id="label">FIXME</wicket:container> &nbsp; </wicket:container>
+  </p>
+  
+</wicket:extend>
+</html>

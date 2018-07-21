@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <h2>Registrace nového uživatele</h2>
+  
+  <p>Budete-li chtít, můžete svůj účet později ze systému kompletně odstranit.</p>
+  
+  <form wicket:id="form.register">
+    <table>
+      <tr>
+        <th rowspan="2">Login:</th>
+        <td><input wicket:id="login" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <td>Login (přihlašovací jméno) slouží k přihlašování do systému.</td>
+      </tr>
+      <tr>
+        <th rowspan="2">E-mail:</th>
+        <td><input wicket:id="email" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <td>E-mail je povinný. Na něj Vám přijde heslo.</td>
+      </tr>
+      <tr>
+        <th>Heslo:</th>
+        <td>Heslo Vám bude náhodně vygenerováno a odesláno na e-mail.</td>
+      </tr>
+      <tr>
+        <th>Kdo jste:</th>
+        <td><select wicket:id="select.type" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>Odborné zaměření:</th>
+        <td><select wicket:id="select.branch" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>Škola či pracoviště:</th>
+        <td><select wicket:id="select.alma" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th rowspan="2">Pravidla užívání systému</th>
+        <td><textarea wicket:id="rules" rows="5" cols="30" readonly="readonly" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <td><label><input wicket:id="agree" type="checkbox" /> Přečetl jsem si Pravidla užívání systému a souhlasím s nimi.</label></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Zaregistrovat se" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <wicket:container wicket:id="text">FIXME</wicket:container>
+  
+</wicket:extend>
+</html>

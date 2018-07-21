@@ -1,0 +1,36 @@
+* {
+  line-height: 1.5;
+}
+body, html {
+  text-align: left;
+}
+.subtitle, .title {
+  display: none;
+}
+ul.cmdbar {
+  display: none;
+}
+#navigator {
+  display: none;
+}
+#sidebar {
+  display: none;
+}
+#footer {
+  display: none;
+} 
+img {
+  border: 0;
+}
+table {
+  background-color: #cccccc;
+  border-spacing: 2pt;
+}
+th,td {
+  background-color: white;
+  padding: 0.3em 1em;
+}
+.attribute .attribute {
+  margin-left: 2em;
+  padding-left: 2em;
+}

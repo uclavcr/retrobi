@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+  
+  <h2>CSV logy</h2>
+
+  <p>Umístění: <big><code wicket:id="label.dir">FIXME</code></big></p>
+  
+  <table wicket:id="list.csv">
+    <tr wicket:id="row">
+      <td wicket:id="col">
+        <a wicket:id="link"><wicket:container wicket:id="label">FIXME</wicket:container></a>
+      </td>
+    </tr>
+  </table>
+  
+  <h2>Nástroje ke stažení</h2>
+  
+  <ul>
+    <li><a wicket:id="link.processor">Stáhnout Udělátko 1</a> (přejmenování, konverze, detekce prázdných stran lístků)</li>
+    <li><a wicket:id="link.importer">Stáhnout Udělátko 2</a> (zmenšení, zařazení, upload zpracovaných obrázků)</li>
+  </ul>
+  
+  <h2>Správa systému</h2>
+  
+  <h3>Poslední údržba</h3>
+  
+  <ul>
+    <li>Začátek: <strong wicket:id="label.maintenance_start">FIXME</strong></li>
+    <li>Konec: <strong wicket:id="label.maintenance_end">FIXME</strong></li>
+    <li>Příští: <strong wicket:id="label.maintenance_next">FIXME</strong></li>
+  </ul>
+  
+  <h3>Speciální operace</h3>
+  
+  <p>Po provedení těchto operací možná bude systém dočasně zpomalený.</p>
+  
+  <ul>
+    <li><a wicket:id="link.reload.cache">Znovu načíst a seřadit skupiny</a></li>
+    <li><a wicket:id="link.reload.attributes">Znovu načíst definici atributů a indexů</a></li>
+    <li><a wicket:id="link.reload.indexes">Znovu načíst definici indexů</a></li>
+    <li><a wicket:id="link.clean.index">Vyčistit indexy</a></li>
+    <li><a wicket:id="link.optimize.index">Optimalizovat indexy</a></li>
+    <li><a wicket:id="link.ping.index">PING na všechny indexy</a></li>
+    <li><a wicket:id="link.ping.view">PING na všechny pohledy</a></li>
+  </ul>
+  
+  <h3>Paměť na serveru</h3>
+  
+  <ul>
+    <li>Volná: <strong wicket:id="label.mem.free">FIXME</strong></li>
+    <li>Celkem: <strong wicket:id="label.mem.total">FIXME</strong></li>
+    <li>Maximum: <strong wicket:id="label.mem.heap">FIXME</strong></li>
+  </ul>
+
+</wicket:extend>
+</html>

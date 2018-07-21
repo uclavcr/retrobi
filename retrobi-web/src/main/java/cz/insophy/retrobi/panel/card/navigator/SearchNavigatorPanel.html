@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+  <wicket:extend>
+  
+    <table class="navigator">
+    
+      <wicket:container wicket:id="wrap.info">
+        <tr class="higher">
+          <td colspan="2">
+            <p>Počet výsledků: <strong wicket:id="label.count">FIXME</strong></p>
+          </td>
+          <td colspan="3">
+            <p class="centered">
+              <button wicket:id="link.basket.add" class="button">Přidat&nbsp;výsledky&nbsp;do&nbsp;schránky</button>
+              <button wicket:id="link.basket.remove" class="button">Vyjmout&nbsp;ze&nbsp;schránky</button>
+            </p>
+          </td>
+        </tr>
+      </wicket:container>
+    
+      <wicket:container wicket:id="wrap.form">
+        <tr>
+          <td colspan="5">
+            <form wicket:id="form">
+              <table class="searchtable">
+              
+                <tr>
+                  <th>
+                    <p>Dotaz:</p>
+                  </th>
+                  <td>
+                    <p><input wicket:id="input.query" class="searchfield" /></p>
+                  </td>
+                  <td>
+                    <p class="centered"><input type="submit" value="Hledat" /></p>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th>Omezit&nbsp;na&nbsp;část/i:</th>
+                  <td colspan="2">
+                    <ul class="searchcombos">
+                      <li wicket:id="list.catalog"><label><input wicket:id="check" type="checkbox" />&nbsp;<wicket:container wicket:id="label">FIXME</wicket:container></label></li>
+                    </ul>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th rowspan="3">Nastavení:</th>
+                  <td colspan="2">
+                    <label><input wicket:id="check.sensitive" type="checkbox" />&nbsp;Rozlišovat malá a VELKÁ písmena</label>
+                    <label><input wicket:id="check.basket" type="checkbox" />&nbsp;Hledat pouze ve schránce</label>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td colspan="2">
+                    <label><small>Typ textu: <select wicket:id="select.index">FIXME</select></small></label>
+                    <label><small>Stav lístku: <select wicket:id="select.state">FIXME</select></small></label>   
+                  </td>
+                </tr>
+                
+              </table>
+            </form>
+          </td>
+        </tr>
+      </wicket:container>
+      
+      <wicket:container wicket:id="wrap.pager">
+        <tr> 
+          <th class="w15 marked"><a wicket:id="link.first"><img src="icon_first.png" alt="&lt;&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w15 marked"><a wicket:id="link.left"><img src="icon_left.png" alt="&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w40 marked">&nbsp;<a wicket:id="link.up"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_up.png" alt="^" /></a>&nbsp;</th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.right"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_right.png" alt="&gt;" /></a></th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.last"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_last.png" alt="&gt;&gt;" /></a></th>
+        </tr>
+      </wicket:container>
+      
+    </table>
+    
+  </wicket:extend>
+</wicket:panel>
+</html>

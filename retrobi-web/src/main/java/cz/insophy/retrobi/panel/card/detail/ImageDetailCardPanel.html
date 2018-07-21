@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <table>
+  
+    <tr>
+      <th>Nahrát&nbsp;obrázek</th>
+      <td>
+        <form wicket:id="form.add">
+          <p>
+            <label>Strana: <select wicket:id="input.page">FIXME</select></label>
+            <input wicket:id="input.file" type="file" size="30" />
+            <input type="submit" value="Odeslat" />
+          </p>
+        </form>
+      </td>
+    </tr>
+    
+    <tr>
+      <th>Upravit&nbsp;obrázek</th>
+      <td>
+        <form wicket:id="form.edit">
+          <p>
+            <label>Obrázek: <select wicket:id="input.page">FIXME</select></label>
+            <label>Operace: <select wicket:id="input.operation">FIXME</select></label>
+            <input type="submit" value="Upravit" />
+          </p>
+        </form>
+      </td>
+    </tr>
+    
+  </table>
+  
+  <table wicket:id="grid.image" class="centered">
+    <tr wicket:id="rows">
+      <td wicket:id="cols">
+        <img wicket:id="image" alt="" /><br />
+        <big wicket:id="label">FIXME</big>
+      </td>
+    </tr>
+  </table>
+
+</wicket:panel>
+</html>

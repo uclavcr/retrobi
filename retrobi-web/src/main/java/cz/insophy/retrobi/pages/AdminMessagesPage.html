@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+  
+  <h2>Uživatelská hlášení</h2>
+  
+  <form wicket:id="form.filter">
+  
+    <p>
+      <label>Stav: <select wicket:id="select.state">FIXME</select></label>
+      <label>Typ: <select wicket:id="select.type">FIXME</select></label>
+    </p>
+    
+    <p>
+      <label>Uživatel (e-mail): <input wicket:id="input.user" /></label>
+      <input type="submit" value="Vypsat hlášení" />
+    </p>
+  
+  </form>
+  
+  <div wicket:id="panel.pager">FIXME</div>
+  
+  <div wicket:id="list.message">FIXME</div>
+  
+  <h2>Staré záznamy</h2>
+  
+  <p>
+    Staré záznamy jsou potvrzená hlášení z minulého měsíce a starší. 
+    Z preventivních důvodů se vždy stáhne či smaže nejvýše <wicket:container wicket:id="label.limit">FIXME</wicket:container> nejstarších hlášení.
+    Proto je někdy nutné tuto operaci provést několikrát za sebou, než se všechna nepotřebná hlášení smažou.
+  </p>
+
+  <ul>
+    <li><a wicket:id="link.download">Stáhnout staré záznamy jako CSV</a></li>
+    <li><a wicket:id="link.delete">Smazat všechny staré záznamy</a></li>
+  </ul>  
+
+</wicket:extend>
+</html>

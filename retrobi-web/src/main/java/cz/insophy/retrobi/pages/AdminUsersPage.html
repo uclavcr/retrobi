@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+  
+  <h2>Správa uživatelů</h2>
+  
+  <p><a wicket:id="link.download">Stáhnout CSV se všemi uživatelskými daty</a></p>
+  
+  <div wicket:id="panel.pager">FIXME</div>
+  
+  <table wicket:id="list.user">
+  
+    <tr>
+      <th class="w30">Login + e-mail</th>
+      <th class="w20">Role</th>
+      <th class="w5">#1</th>
+      <th class="w5">#2</th>
+      <th class="w20"><a wicket:id="link.reset_ocr">Smazat přepisy</a></th>
+      <th><a wicket:id="link.remove">Smazat</a></th>
+    </tr>
+    
+    <tr>
+      <td>
+        <wicket:container wicket:id="label.login">FIXME</wicket:container><br />
+        <strong wicket:id="label.email">FIXME</strong>
+      </td>
+      <td>
+        <form wicket:id="form.role">
+          <p>
+            <select wicket:id="select.role">FIXME</select><br />
+            <input type="submit" value="Nastavit" />
+          </p>
+        </form>
+      </td>
+      <td wicket:id="label.count_login">FIXME</td>
+      <td wicket:id="label.count_edit">FIXME</td>
+      <td colspan="2">
+        <form wicket:id="form.limit">
+          <p> * 
+            <label>schránka: <input wicket:id="input.limit.basket" size="4" maxlength="5" /></label>
+            <label>počet: <input wicket:id="input.limit.cardset" size="4" maxlength="5" /></label><br />
+            <input type="submit" value="Nastavit limity" />
+          </p>
+        </form>
+      </td>
+    </tr>
+          
+  </table>
+  
+  <ul>
+    <li>#1 = počet přihlášení</li>
+    <li>#2 = počet přepisů</li>
+    <li>* neomezeno = -1</li>
+  </ul>
+  
+  <h2>Počet uživatelů</h2>
+  
+  <table>
+  
+    <tr>
+      <th>Název</th>
+      <th>Počet uživatelů</th>
+    </tr>
+    
+    <tr wicket:id="list.counter">
+      <td wicket:id="label.title">FIXME</td>
+      <td wicket:id="label.count">FIXME</td>
+    </tr>
+  
+  </table>
+  
+</wicket:extend>
+</html>

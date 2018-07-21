@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:head>
+  <!-- INSERT UTILITY SCRIPT -->
+  <script type="text/javascript">
+			function insertAtCursor(id, text) {
+				var element = document.getElementById(id);
+				if (document.selection) {
+					element.focus();
+					var sel = document.selection.createRange();
+					sel.text = text;
+					element.focus();
+				} else if (element.selectionStart || element.selectionStart === 0) {
+					var startPos = element.selectionStart;
+					var endPos = element.selectionEnd;
+					var scrollTop = element.scrollTop;
+					element.value = element.value.substring(0, startPos)
+							+ text
+							+ element.value.substring(endPos,
+									element.value.length);
+					element.focus();
+					element.selectionStart = startPos + text.length;
+					element.selectionEnd = startPos + text.length;
+					element.scrollTop = scrollTop;
+				} else {
+					element.value += text;
+					element.focus();
+				}
+			}
+  </script>
+</wicket:head>
+<wicket:panel>
+
+  <wicket:enclosure child="list.property">
+    <table class="properties">
+      <tr wicket:id="list.property">
+        <th wicket:id="label.title">FIXME</th>
+        <td wicket:id="label.value">FIXME</td>
+      </tr>
+    </table>
+  </wicket:enclosure>
+  
+  <p wicket:id="label.state">FIXME</p>
+
+  <form wicket:id="form.ocr">
+    <fieldset>
+      <legend>Přepis OCR</legend>
+      <p><textarea id="input.ocr" wicket:id="input.ocr" rows="5" cols="50" class="fullsize">FIXME</textarea></p>
+      <ul class="cmdbar">
+        <li>Vložit znak:</li>
+        <li><a wicket:id="link.add.segment">Segment</a></li>
+        <li><a wicket:id="link.add.anonymous">Anonym</a></li>
+        <li><a wicket:id="link.add.lsquare">&nbsp;[&nbsp;</a></li>
+        <li><a wicket:id="link.add.rsquare">&nbsp;]&nbsp;</a></li>
+        <li><a wicket:id="link.add.lt">&nbsp;&lt;&nbsp;</a></li>
+        <li><a wicket:id="link.add.gt">&nbsp;&gt;&nbsp;</a></li>
+        <li><input type="submit" value="Uložit a segmentovat" /></li>
+        <li><a wicket:id="link.help"><img src="icon_help.png" alt="" /> Editace</a></li>
+      </ul>
+    </fieldset>
+    <wicket:enclosure child="label.ocr">
+      <fieldset>
+        <legend>Původní OCR</legend>
+        <p wicket:id="label.ocr">FIXME</p>
+      </fieldset>
+    </wicket:enclosure>
+  </form>
+  
+  <form wicket:id="form.segment">
+    <table class="properties">
+      <tr>
+        <th>Záhlaví:</th>
+        <td><textarea wicket:id="input.segment.h" rows="3" cols="50" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>Názvová část:</th>
+        <td><textarea wicket:id="input.segment.t" rows="3" cols="50" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>Bibliografická část:</th>
+        <td><textarea wicket:id="input.segment.b" rows="3" cols="50" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>Anotační část:</th>
+        <td><textarea wicket:id="input.segment.a" rows="3" cols="50" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>Excerptor:</th>
+        <td><textarea wicket:id="input.segment.e" rows="3" cols="50" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Uložit segmentaci" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <wicket:container wicket:id="label.help">FIXME</wicket:container>
+
+</wicket:panel>
+</html>

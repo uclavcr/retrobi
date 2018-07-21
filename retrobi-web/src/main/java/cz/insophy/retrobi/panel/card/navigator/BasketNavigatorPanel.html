@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+  <wicket:extend>
+  
+    <table class="navigator">
+    
+      <wicket:container wicket:id="wrap.operation1">
+        <tr>
+          <td>
+            <p>Počet lístků: <strong wicket:id="label.count">FIXME</strong></p>
+          </td>
+          <th>
+            <p>Přesun:</p>
+          </th>
+          <td>
+            <form wicket:id="form.operation">
+              <p class="centered">
+                Lístky <input wicket:id="input.from" size="3" maxlength="6" />
+                až <input wicket:id="input.to" size="3" maxlength="6" />
+                <select wicket:id="select.operation">FIXME</select>
+                <input wicket:id="input.target" size="3" maxlength="6" />
+                <input type="submit" value="OK" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </wicket:container>
+      
+      <wicket:container wicket:id="wrap.operation2">
+        <tr class="higher">
+          <td>
+            <p class="centered">
+              <button wicket:id="link.sort" class="button">Seřadit&nbsp;jako&nbsp;katalog</button>
+              <button wicket:id="link.clear" class="button">Vymazat</button>
+            </p>
+          </td>
+          <th>
+            <p>Uložení:</p>
+          </th>
+          <td>
+            <p class="centered">
+              <button wicket:id="link.download" class="button">Stáhnout&nbsp;na&nbsp;disk</button>
+              <button wicket:id="link.save" class="button">Moje&nbsp;schránky</button>
+              <button wicket:id="link.hide" class="button">Skrýt&nbsp;panel</button>
+            </p>
+          </td>
+        </tr>
+      </wicket:container>
+      
+    </table>
+      
+    <wicket:container wicket:id="panel.download">FIXME</wicket:container>
+    <wicket:container wicket:id="panel.save">FIXME</wicket:container>
+      
+    <table class="navigator">
+      
+      <wicket:container wicket:id="wrap.pager">
+        <tr> 
+          <th class="w15 marked"><a wicket:id="link.first"><img src="icon_first.png" alt="&lt;&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w15 marked"><a wicket:id="link.left"><img src="icon_left.png" alt="&lt;" /> <wicket:container wicket:id="label">FIXME</wicket:container></a>&nbsp;</th>
+          <th class="w40 marked">&nbsp;<a wicket:id="link.up"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_up.png" alt="^" /></a>&nbsp;</th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.right"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_right.png" alt="&gt;" /></a></th>
+          <th class="w15 marked">&nbsp;<a wicket:id="link.last"><wicket:container wicket:id="label">FIXME</wicket:container> <img src="icon_last.png" alt="&gt;&gt;" /></a></th>
+        </tr>
+      </wicket:container>
+      
+    </table>
+    
+  </wicket:extend>
+</wicket:panel>
+</html>

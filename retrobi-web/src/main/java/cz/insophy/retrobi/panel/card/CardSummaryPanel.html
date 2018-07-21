@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+  
+  <div class="cardImages">
+    
+    <wicket:container wicket:id="list.image">
+      
+      <p>
+        <a wicket:id="list.item.link.image"><img wicket:id="image" alt="" class="cardImage" /></a>
+      </p>
+        
+    </wicket:container>
+
+    <p wicket:id="label.ocr" class="ocrlike">FIXME</p>
+    
+    <wicket:enclosure child="search.highlight">
+      <div class="cardSearch">
+        <p>Okolí nalezeného textu:</p>
+        <p wicket:id="search.highlight" class="codelike">FIXME</p>
+      </div>
+    </wicket:enclosure>
+      
+  </div>
+    
+  <div class="cardInfo">
+
+    <wicket:enclosure child="link.label">
+      <p class="staterelative">
+        <small>Pořadí:</small> <big><a wicket:id="link.label" class="downlink"><wicket:container wicket:id="label">FIXME</wicket:container></a></big>
+        <wicket:enclosure child="label.state">
+            <span class="stateicon">Stav: <wicket:container wicket:id="label.state">FIXME</wicket:container></span>
+        </wicket:enclosure>
+      </p>
+    </wicket:enclosure>
+      
+    <wicket:enclosure child="link.basket.add">
+      <ul class="cmdbar lined staterelative">
+        <li><small>Schránka:</small></li>
+        <li><a wicket:id="link.basket.add" title="Vložit lístek do schránky"><img src="icon_basket_add.png" alt="Vložit" /> Vložit</a></li>
+        <li class="stateicon"><a wicket:id="link.basket.remove" title="Vyjmout lístek ze schránky"><img src="icon_basket_remove.png" alt="Vyjmout" /> Vyjmout</a></li>
+      </ul>
+    </wicket:enclosure>
+    
+    <wicket:enclosure child="link.basket.up">
+      <ul class="cmdbar topspace">
+        <li><small>Přesun:</small></li>
+        <li><a wicket:id="link.basket.up" title="Posunout lístek nahoru"><img src="icon_up.png" alt="&#47;&#92;" /></a></li>
+        <li><a wicket:id="link.basket.down" title="Posunout lístek dolů"><img src="icon_down.png" alt="&#92;&#47;" /></a></li>
+      </ul>
+    </wicket:enclosure>
+    
+    <wicket:container wicket:id="panel.info">
+      <p class="info lined"><small>Část:</small> <strong wicket:id="label.catalog" class="info">FIXME</strong></p>
+      <p class="info"><small>Skupina:</small> <a wicket:id="link.batch"><wicket:container wicket:id="label" class="info">FIXME</wicket:container></a></p>
+      <p class="info"><a wicket:id="link.number"><wicket:container wicket:id="label" class="info">FIXME</wicket:container></a></p>
+    </wicket:container>
+
+  </div>
+    
+  <div class="cardPanel">
+    <wicket:child />
+  </div>
+    
+</wicket:panel>
+</html>

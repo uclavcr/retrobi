@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <fieldset>
+  
+    <legend>Stáhnout schránku na disk</legend>
+    
+    <form wicket:id="form.download">
+      <table>
+        <tr>
+          <th>
+            <p>Obrázky:</p>
+          </th>
+          <td>
+            <p><select wicket:id="select.type">FIXME</select></p>
+          </td>
+          <th>
+            <p>Kvalita:</p>
+          </th>
+          <td>
+            <p><select wicket:id="select.quality">FIXME</select></p>
+          </td>
+          <th>
+            <p>Formát:</p>
+          </th>
+          <td>
+            <p><select wicket:id="select.format">FIXME</select></p>
+          </td>  
+        </tr>
+        <tr>
+          <th>
+            <p>Texty:</p></th>
+          <td>
+            <p><select wicket:id="select.text">FIXME</select></p>
+          </td>
+          <th>
+            <p>Připojit:</p>
+          </th>
+          <td colspan="2">
+            <p>
+              <label><input wicket:id="check.detail" type="checkbox" /> Položkový rozpis</label><br />
+              <label><input wicket:id="check.comments" type="checkbox" /> Komentáře</label>
+            </p>
+          </td>
+          <td>
+            <p class="centered"><input type="submit" value="Stáhnout" /></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+    
+  </fieldset>  
+  
+</wicket:panel>
+</html>
