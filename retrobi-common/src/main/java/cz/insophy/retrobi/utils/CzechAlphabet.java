@@ -48,7 +48,7 @@ public class CzechAlphabet implements Comparator<String> {
      * (e.g. Ň) will be filed under the fallback letter (?)
      */
     private static final List<String> ALPHABET = Collections.unmodifiableList(Arrays.asList(
-            ("A,B,C,Č,D,Ď,E,F,G,H,CH,I,J,K,L,M,N,O,P,Q,R,Ř,S,Š,T,Ť,U,V,W,X,Y,Z,Ž," + CzechAlphabet.FALLBACK_LETTER).split(",")));
+            ("A,B,C,Č,D,Ď,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,Ř,S,Š,T,Ť,U,V,W,X,Y,Z,Ž," + CzechAlphabet.FALLBACK_LETTER).split(",")));
     /**
      * the collation rules (note: if changed, update unit tests)
      */
@@ -58,7 +58,7 @@ public class CzechAlphabet implements Comparator<String> {
             "< '&' < '¢' < '£' < '¤' < '¥' < '§' < '©' < '®' < '%' < '‰' < '$' " +
             "< '=' < '+' < '×' < '*' < '÷' < '~' " +
             "< A,a;Á,á;À,à;Â,â;Ą,ą < Ä,ä < B,b < C,c;Ç,ç;Ć,ć < Č,č < D,d < Ď,ď < E,e;É,é;È,è;Ê,ê;Ë,ë;Ę,ę < Ě,ě " +
-            "< F,f < G,g < H,h < CH,Ch,cH,ch < I,i;Í,í;Ï,ï < J,j < K,k < L,l;Ľ,ľ;Ł,ł < M,m < N,n < Ň,ň " +
+            "< F,f < G,g < H,h < I,i;Í,í;Ï,ï < J,j < K,k < L,l;Ľ,ľ;Ł,ł < M,m < N,n < Ň,ň " +
             "< O,o;Ó,ó;Ô,ô < Ö,ö < P,p < Q,q < R,r;Ŕ,ŕ < Ř,ř < S,s;Ś,ś < Š,š < T,t < Ť,ť " +
             "< U,u;Ú,ú;Ů,ů < Ü,ü < V,v < W,w < X,x < Y,y;Ý,ý < Z,z;Ż,ż;Ź,ź < Ž,ž " +
             "< 0 < 1 < 2 < 3 < 4 < 5 < 6 < 7 < 8 < 9";
