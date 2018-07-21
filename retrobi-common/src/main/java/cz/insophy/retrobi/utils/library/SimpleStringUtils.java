@@ -24,9 +24,11 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.channels.IllegalSelectorException;
 import java.security.MessageDigest;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.jcouchdb.util.StringUtil;
 import org.slf4j.Logger;
@@ -323,11 +325,7 @@ public final class SimpleStringUtils {
      * @return string with newlines replaced by the replacement string
      */
     protected static String fixNewLines(final String str, final String replacement) {
-        String result = str;
-        result = result.replace("\r\n", replacement);
-        result = result.replace("\r", replacement);
-        result = result.replace("\n", replacement);
-        return result;
+        return Arrays.stream(str.split("\\r?\\n|\\r")).collect(Collectors.joining(replacement));
     }
     
     /**

@@ -225,7 +225,7 @@ public class SimpleStringUtilsTest {
         this.testHash(null, null);
         this.testHash("admin", "77+9M++/vSrvv71I77+977+9Zg/vv70UCu+/vTXvv70MTe+/ve+/vQ==");
         this.testHash("nimda", "77+9y7Lvv708UBbvv71+77+977+9E1rvv73vv73vv71n77+9YQ==");
-        this.testHash("Zkouška s diakritikou, znaky, čísly (1234567890).", "xYFeHjB+OlHvv73vv712Ee+/ve+/vXDvv73vv71G77+9");
+        this.testHash("Zkouška s diakritikou, znaky, čísly (1234567890).", "xYFeHjB+OlHvv73vv712Ee+/ve+/vXDvv73vv71G77+977+9");
     }
     
     /**
