@@ -263,16 +263,16 @@ public class CzechAlphabet implements Comparator<String> {
     /**
      * Returns the first letter of a string, preferably a capital (if any). The
      * letter returned is always in upper case. If no letter character is found,
-     * returns <code>null</code>. This method respect the Czech 'CH' letter.
+     * returns <code>null</code>. This method ignores the Czech 'CH' letter and sees it as 'C'.
      * Examples:
      * 
      * <pre>
      * novak &gt; N
      * d'Alambert &gt; D
      * !!?!!?Some &gt; S
-     * cha-cha &gt; CH
+     * cha-cha &gt; C
      * 123456 &gt; null
-     * achCha &gt; CH
+     * achCha &gt; C
      * achCa &gt; C
      * </pre>
      * 
@@ -311,15 +311,7 @@ public class CzechAlphabet implements Comparator<String> {
         }
         
         final char letter = Character.toUpperCase(str.charAt(finalLetterIndex));
-        
-        // check possibility of CH
-        
-        if ((letter == 'C') && (finalLetterIndex < str.length() - 1)) {
-            if (Character.toUpperCase(str.charAt(finalLetterIndex + 1)) == 'H') {
-                return "CH";
-            }
-        }
-        
+
         return String.valueOf(letter);
     }
     
