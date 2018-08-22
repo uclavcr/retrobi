@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <h3>Úprava</h3>
+  
+  <form wicket:id="form">
+    <table class="properties">
+      <tr>
+        <th>URL adresa:</th>
+        <td><input wicket:id="input.url" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <th>Poznámka:</th>
+        <td><textarea wicket:id="input.note" rows="3" cols="30" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Uložit změny" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Přesun</h3>
+  
+  <table>
+    <tr>
+      <th rowspan="3">Přesun</th>
+      <td rowspan="2">Vložit celou schránku</td>
+      <td><a wicket:id="link.move.before">PŘED tento lístek</a></td>
+    </tr>
+    <tr>
+      <td><a wicket:id="link.move.after">ZA tento lístek</a></td>
+    </tr>
+    <tr>
+      <td>Přečíslovat</td>
+      <td><a wicket:id="link.renumber">Přečíslovat celou skupinu od 1</a></td>
+    </tr>
+  </table>
+  
+  <h3>Mazání</h3>
+  
+  <table>
+    <tr>
+      <th rowspan="2">Rozpis</th>
+      <td><a wicket:id="link.reset_tree">Reset položkového rozpisu</a></td>
+    </tr>
+    <tr>
+      <td><a wicket:id="link.clean_tree">Smazat nevyužitá pole rozpisu</a></td>
+    </tr>
+    <tr>
+      <th rowspan="2">Mazání</th>
+      <td><a wicket:id="link.delete">Smazat tento lístek</a></td>
+    </tr>
+    <tr>
+      <td><a wicket:id="link.delete.batch">Smazat celou skupinu</a></td>
+    </tr>
+  </table>
+  
+</wicket:panel>
+</html>

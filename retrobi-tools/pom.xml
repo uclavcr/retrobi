@@ -1,0 +1,66 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cz.insophy</groupId>
+    <artifactId>retrobi</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>retrobi-tools</artifactId>
+  <packaging>jar</packaging>
+  <name>retrobi-tools</name>
+  <dependencies>
+    <dependency>
+      <groupId>cz.insophy</groupId>
+      <artifactId>retrobi-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <!-- this version contains the fix for duplicate files in jar -->
+        <version>2.2-beta-5</version>
+        <configuration>
+          <finalName>retrobi-tools</finalName>
+          <appendAssemblyId>false</appendAssemblyId>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <!-- <archiverConfig><duplicateBehaviour>skip</duplicateBehaviour></archiverConfig> -->
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attached</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jarsigner-plugin</artifactId>
+        <version>1.2</version>
+        <executions>
+          <execution>
+            <id>sign</id>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <keystore>${basedir}/../retrobi.keystore</keystore>
+          <alias>retrobi</alias>
+          <storepass>iborter</storepass>
+          <!-- <keypass>Key password</keypass> -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

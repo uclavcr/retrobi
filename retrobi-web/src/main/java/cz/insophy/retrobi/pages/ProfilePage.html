@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <h2>Úprava profilu</h2>
+  
+  <h3>Základní informace</h3>
+  
+  <form wicket:id="form.profile.edit">
+    <table>
+       <tr>
+        <th>Jste:</th>
+        <td><select wicket:id="select.type" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>Odborné zaměření:</th>
+        <td><select wicket:id="select.branch" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>Škola či pracoviště:</th>
+        <td><select wicket:id="select.alma" class="fullsize">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Uložit změny" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <p>Počet Vašich přihlášení: <strong wicket:id="label.count_login">FIXME</strong></p>
+  <p>Počet Vašich přepisů: <strong wicket:id="label.count_edit">FIXME</strong></p>
+  <p>Vaše systémové ID: <strong wicket:id="label.id">FIXME</strong></p>
+  
+  <h3>Změna přihlašovacích údajů</h3>
+  
+  <form wicket:id="form.login.edit">
+    <table>
+      <tr>
+        <th>Login:</th>
+        <td><input wicket:id="login" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td><input wicket:id="email" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <th rowspan="2">Heslo:</th>
+        <td><input wicket:id="password1" type="password" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <td>Pokud heslo nechcete měnit, ponechte políčko prázdné.</td>
+      </tr>
+      <tr>
+        <th>Heslo znovu:</th>
+        <td><input wicket:id="password2" type="password" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Uložit" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Zrušit profil</h3>
+  
+  <form wicket:id="form.profile.delete">
+    <p>
+      <input type="submit" value="Chci nevratně smazat svůj profil" onclick="return confirm('Opravdu chcete nevratně smazat svůj profil?');" />
+    </p>
+  </form>
+  
+</wicket:extend>
+</html>

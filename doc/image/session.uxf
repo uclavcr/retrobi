@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>60</x>
+      <y>190</y>
+      <w>330</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>RetrobiWebSession
+--
+-lastMessageSent: long
+-loggedUser: User
+--
+/+get(): RetrobiWebSession/
++canDownloadBasket(): boolean
++canSendMessage(): boolean
++getActiveTask(): LongTask
++getBasketLimit(): int
++getCardsetLimit(): int
++getCardContainer(): SessionCardContainer
++getCardView(): SessionCardView
++getLoggedUser(): User
++getTaskQueueVersion(): long
++getUserRole(): UserRole
++hasRoleAtLeast(UserRole): boolean
++login(String, String): boolean
++logout(): void
++notifyMessageSent(): void
++refreshLoggedUser(): boolean
++scheduleTask(LongTask): boolean
++stopActiveTask(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>90</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WebSession
+(Wicket)
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>210</x>
+      <y>110</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>280</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>SessionCardContainer
+--
+basketCardIds: List&lt;String&gt; 
+--
+(add to basket)
+(remove from basket)
+(get basket size)
+(move in basket)
+(basket import/export)
+(basket sorting)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>190</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>SessionCardView
+--
+ 
+--
+(user view settings)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>310</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>190</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>700</x>
+      <y>250</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>BatchCardModificationResult
+--
+changedCards: List&lt;Card&gt;
+unchangedCards: List&lt;Card&gt;
+lastModification: CardModification
+skippedCards:int
+--
+modify(Card, CardModification): void
+getChangedCards(): List&lt;Card&gt;
+(get counts)
+(clear modified cards)
+(basket operations)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>460</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>LongTaskManager
+--
+version: long
+--
+getActiveTask(): LongTask
+getVersion(): long
+scheduleTask(LongTask): boolean
+stopActiveTask(): boolean
+onTaskFinished(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>450</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>620</x>
+      <y>310</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>750</x>
+      <y>520</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+LongTask</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>660</x>
+      <y>520</y>
+      <w>60</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90;30;90;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>670</x>
+      <y>520</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+</diagram>

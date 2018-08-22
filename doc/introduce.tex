@@ -1,0 +1,21 @@
+\chapter{Úvod}
+
+\section{Cíl projektu}
+
+Tento dokument vznikl jako implementační dokumentace projektu digitalizace a online zpřístupnění kartotéky retrospektivní bibliografie české literární vědy. Projekt má za cíl především usnadnit vyhledávání a listování existující kartotékou bez nutnosti fyzického přístupu k lístkům. Využitím moderních technologií je možné práci s těmito lístky umožnit všem, kteří online katalog navštíví přes internet. Významným přínosem a součástí projektu je i provedení OCR rekognoskace při importu dat a možnost fulltextového vyhledávání v těchto datech. Shromážděné lístky bude dále možné v průběhu času spravovat a informace na nich obsažené stále přesněji strukturovat.
+
+Projekt je výsledkem projektu \uv{Digitalizace lístkového katalogu Retrospektivní bibliografie české literární vědy 1775--1945} (VZ09004), který v rámci programu INFOZ v letech 2009--2011 laskavě finančně podpořilo Ministerstvo školství, mládeže a tělovýchovy České republiky.
+
+Vlastní projekt je možné rozdělit do několika částí:
+
+\begin{itemize}
+\item{návrh procesu plnění a údržby katalogu (částečně jde mimo tuto dokumentaci, protože je v režii zaměstnanců ÚČL);}
+\item{vytvoření jednoúčelových nástrojů pro zpracování a import obrázků do databáze tak, aby odpovídaly navrženému procesu;}
+\item{vytvoření webové aplikace určené k procházení a správě nashromážděných dat.}
+\end{itemize}
+
+Poměrně přesné zadání projektu (včetně všech původních požadavků ze strany ÚČL) lze najít v zadávací dokumentaci. V průběhu času se tyto požadavky samozřejmě lehce měnily, usměrňovaly a stabilizovaly, jak se projekt vyvíjel.
+
+\section{Dostupnost}
+
+Zdrojové kódy aplikace byly předány na datových nosičích a jejich záloha je umístěna na verzovacím systému SVN společnosti inSophy~s.r.o. Veškerý software od třetích stran potřebný k sestavení a provozování systému je šířen zdarma či pod svobodnou licencí. Celý proces kompilace včetně stažení potřebných závislostí a knihoven je řízen systémem Maven a je popsán v následujících kapitolách.

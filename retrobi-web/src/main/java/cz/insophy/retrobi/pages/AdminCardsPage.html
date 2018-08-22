@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+  
+  <h2>Hromadná úprava lístků</h2>
+  
+  <p>Hromadná dvoufázová úprava atributů lístků ve schránce.</p>
+  
+  <h3>Přidat hodnotu atributu</h3>
+  
+  <p>Hodnota atributu nebude přidána právě když atribut není opakovatelný a na lístku se již nějaká jeho hodnota vyskytuje.</p>
+ 
+  <form wicket:id="form.add">
+    <table class="properties">
+      <tr>
+        <th>Atribut:</th>
+        <td><select wicket:id="select">FIXME</select></td>
+      </tr>
+      <tr>
+        <th>Hodnota:</th>
+        <td><textarea wicket:id="input" rows="2" cols="30" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Aplikovat na schránku" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Odebrat hodnotu atributu</h3>
+  
+  <p>Hodnota atributu bude odstraněna právě když je rovna zadané hodnotě, nebo je políčko s hodnotou prázdné.</p>
+  
+  <form wicket:id="form.remove">
+    <table class="properties">
+      <tr>
+        <th>Atribut:</th>
+        <td><select wicket:id="select">FIXME</select></td>
+      </tr>
+      <tr>
+        <th rowspan="2">Hodnota:</th>
+        <td><textarea wicket:id="input" rows="2" cols="30" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+          <td>* Pokud ponecháte pole prázdné, budou odstraněny všechny hodnoty.</td>
+        </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Aplikovat na schránku" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Vyčištění rozpisu</h3>
+  
+  <p>Z položkového rozpisu budou odstraněny všechny prázdné atributy, které lze smazat.</p>
+  
+  <form wicket:id="form.clean">
+    <p><input type="submit" value="Aplikovat na schránku" /></p>
+  </form>
+  
+  <wicket:enclosure child="form.edit_batch">
+    <h3>Skupina</h3>
+    
+    <form wicket:id="form.edit_batch">
+      <table class="properties">
+        <tr>
+          <th>Nový katalog:</th>
+          <td><select wicket:id="select.catalog">FIXME</select></td>
+        </tr>
+        <tr>
+          <th>Nová skupina:</th>
+          <td><input wicket:id="input.batch" type="text" class="fullsize" /></td>
+        </tr>
+        <tr>
+          <th rowspan="2">* Nová skupina pro řazení:</th>
+          <td><input wicket:id="input.batch_sort" type="text" class="fullsize" /></td>
+        </tr>
+        <tr>
+          <td>* Pokud ponecháte pole prázdné, bude doplněno automaticky.</td>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <td><input type="submit" value="Aplikovat na schránku" /></td>
+        </tr>
+      </table>
+    </form>
+  </wicket:enclosure>
+  
+  <h3>Odkaz na web</h3>
+  
+  <form wicket:id="form.edit_url">
+    <table class="properties">
+      <tr>
+        <th>URL:</th>
+        <td><input wicket:id="input" type="text" class="fullsize" /></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Aplikovat na schránku" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Poznámka</h3>
+  
+  <form wicket:id="form.edit_note">
+    <table class="properties">
+      <tr>
+        <th>Poznámka:</th>
+        <td><textarea wicket:id="input" rows="3" cols="30" class="fullsize">FIXME</textarea></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><label><input wicket:id="append" type="checkbox" /> Připojit k existující</label></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><input type="submit" value="Aplikovat na schránku" /></td>
+      </tr>
+    </table>
+  </form>
+  
+  <h3>Výsledek poslední operace</h3>
+  
+  <table>
+  
+    <tr>
+      <th class="half">Změněné: <big wicket:id="label.ok">FIXME</big></th>
+      <th class="half">Nezměněné: <big wicket:id="label.fail">FIXME</big></th>
+    </tr>
+    
+    <tr>
+      <td class="marked"><a wicket:id="link.ok_save">Uložit úspěšně změněné</a></td>
+      <th class="half">Přeskočené: <big wicket:id="label.skip">FIXME</big></th>
+    </tr>
+    
+    <tr>
+      <td><a wicket:id="link.ok_to_basket">Nahrát změněné do schránky</a></td>
+      <td><a wicket:id="link.fail_to_basket">Nahrát nezměněné do schránky</a></td>
+    </tr>
+    
+    <tr>
+      <td><a wicket:id="link.ok_from_basket">Vyjmout změněné ze schránky</a></td>
+      <td><a wicket:id="link.fail_from_basket">Vyjmout nezměněné ze schránky</a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2"><a wicket:id="link.clear">Zrušit všechny neuložené změny</a></td>
+    </tr>
+    
+  </table>
+  
+  <wicket:enclosure child="form.create">
+    <h2>Vytvořit lístek</h2>
+    
+    <form wicket:id="form.create">
+      <table class="properties">
+        <tr>
+          <th>Katalog:</th>
+          <td><select wicket:id="select.catalog">FIXME</select></td>
+        </tr>
+        <tr>
+          <th>Skupina:</th>
+          <td><input wicket:id="input.batch" /></td>
+        </tr>
+        <tr>
+          <th>Pořadí:</th>
+          <td><input wicket:id="input.number" /></td>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <td><input type="submit" value="Vytvořit lístek" /></td>
+        </tr>
+      </table>
+    </form>
+  </wicket:enclosure>
+
+</wicket:extend>
+</html>

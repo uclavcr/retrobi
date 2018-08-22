@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <table class="navigator">
+    <tr class="head">
+      <th class="w20 caption"><big><a wicket:id="link.head">Katalog</a></big></th>
+      <th class="w70"><h2>Rejstřík</h2></th>
+      <th class="w5"><a wicket:id="link.help" title="Nápověda"><img src="icon_help32.png" alt="" /></a></th>
+      <th class="w5"><a href="javascript:window.print();" title="Tisk"><img src="icon_print32.png" alt="" /></a></th>
+    </tr>
+  </table>
+  
+  <wicket:container wicket:id="list.catalog">
+  
+    <h4 wicket:id="label.title">FIXME</h4> 
+    
+    <wicket:enclosure child="link.single">
+      <p><a wicket:id="link.single">Zobrazit lístky</a></p>
+    </wicket:enclosure>
+    
+    <table wicket:id="grid.letter">
+      <tr wicket:id="rows">
+        <td wicket:id="cols">
+          <a wicket:id="link"><big wicket:id="label">FIXME</big></a>
+        </td>
+      </tr>
+    </table>
+  
+  </wicket:container>
+  
+  <p>Počet skupin v celém katalogu: <strong wicket:id="label.count">FIXME</strong></p>
+  
+</wicket:extend>
+</html>

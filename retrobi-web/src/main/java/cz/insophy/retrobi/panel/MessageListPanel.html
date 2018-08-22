@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <table wicket:id="list">
+  
+    <tr class="messages">
+    
+      <th class="subject">
+        <strong wicket:id="label.subject">FIXME</strong><br />
+        <a wicket:id="link.card"><wicket:container wicket:id="label.card">FIXME</wicket:container> <wicket:container wicket:id="label.image">FIXME</wicket:container></a>
+      </th>
+      
+      <th class="info">
+        <wicket:container wicket:id="label.date">FIXME</wicket:container><br />
+        <wicket:container wicket:id="label.user">FIXME</wicket:container>
+      </th>
+      
+      <th class="flag">
+        <a wicket:id="link.confirm"><img wicket:id="image" alt="" /></a>
+      </th>
+      
+    </tr>
+    
+    <wicket:enclosure child="label.body">
+      <tr class="messages">
+      
+        <td colspan="3" class="message">
+          <wicket:container wicket:id="label.body">FIXME</wicket:container>
+        </td>
+        
+      </tr>
+    </wicket:enclosure>
+     
+  </table>
+
+</wicket:panel>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:panel>
+
+  <fieldset>
+  
+    <legend>Moje schránky v databázi</legend>
+    
+    <table>
+      <tr>
+        <th class="w60">Vyberte schránku v&nbsp;databázi:</th>
+        <th class="w40">Uložit do&nbsp;databáze jako:</th>
+      </tr>
+      <tr>
+        <td>
+          <form wicket:id="form.load">
+            <p>
+              <select wicket:id="select">FIXME</select>
+              <input wicket:id="submit.load" type="submit" value="Načíst" />
+              <input wicket:id="submit.remove" type="submit" value="Smazat" />
+            </p>
+          </form>
+        </td>
+        <td>
+          <form wicket:id="form.save">
+            <p>
+              <input wicket:id="field.title" size="18" maxlength="30" />
+              <input type="submit" value="Uložit" />
+            </p>
+          </form>
+        </td> 
+      </tr>
+    </table>
+  
+  </fieldset>
+  
+  <fieldset>
+  
+    <legend>Moje schránky na disku</legend>
+    
+    <table>
+      <tr>
+        <th class="w60">Načíst z vlastního disku:</th>
+        <th class="w40">Uložit na vlastní disk:</th>
+      </tr>
+      <tr>
+        <td>
+          <form wicket:id="form.upload">
+            <p>
+              <input wicket:id="input" type="file" size="18" />
+              <input type="submit" value="Načíst" />
+            </p>
+          </form>
+        </td>
+        <td>
+          <p>
+            <button wicket:id="link.get.txt">Uložit</button>
+          </p>
+        </td>
+      </tr>
+    </table>
+  
+  </fieldset>
+  
+</wicket:panel>
+</html>

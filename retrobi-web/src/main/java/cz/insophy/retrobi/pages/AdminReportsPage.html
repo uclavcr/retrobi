@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" xml:lang="en" lang="en">
+<wicket:extend>
+
+  <h2>Statistiky</h2>
+  
+  <p><a wicket:id="link.stats" onclick="return !window.open(this.href);">Statistiky přístupu na web (AWStats)</a></p>
+  
+  <h3>Nejvíce přepisů</h3>
+  
+  <table>
+    <tr>
+      <th>Počet přepisů</th>
+      <th>Login</th>
+      <th>E-mail</th>
+    </tr>
+    <tr wicket:id="list.top">
+      <td wicket:id="label.count">FIXME</td>
+      <td wicket:id="label.login">FIXME</td>
+      <td wicket:id="label.email">FIXME</td>
+    </tr>
+  </table>
+  
+  <h2>Analýza chyb</h2>
+  
+  <h3>Chybné lístky (limit = 100)</h3>
+  
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Problém</th>
+      <th>ID lístku</th>
+    </tr>
+    <tr wicket:id="list.error">
+      <td wicket:id="nr">FIXME</td>
+      <td wicket:id="label">FIXME</td>
+      <td><a wicket:id="link"><wicket:container wicket:id="label">FIXME</wicket:container></a></td>
+    </tr>
+  </table>
+  
+  <h3>Skupiny bez prvního lístku</h3>
+  
+  <table>
+    <tr>
+      <th>Část katalogu</th>
+      <th>Skupina</th>
+      <th>Číslo prvního lístku</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr wicket:id="list.invalid_first">
+      <td wicket:id="label.catalog">FIXME</td>
+      <td wicket:id="label.batch">FIXME</td>
+      <td wicket:id="label.number">FIXME</td>
+      <td><a wicket:id="link.renumber">Přečíslovat</a></td>
+    </tr>
+  </table>
+  
+  <h3>Skupiny s nesouvislým číslováním</h3>
+  
+  <table>
+    <tr>
+      <th>Část katalogu</th>
+      <th>Skupina</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr wicket:id="list.invalid_numbers">
+      <td wicket:id="label.catalog">FIXME</td>
+      <td wicket:id="label.batch">FIXME</td>
+      <td><a wicket:id="link.renumber">Přečíslovat</a></td>
+    </tr>
+  </table>
+  
+  <h3>Odlišné skupiny pro řazení</h3>
+  
+  <table>
+    <tr>
+      <th>Část katalogu</th>
+      <th>Skupina</th>
+      <th>Řazení</th>
+      <th>Počet lístků</th>
+    </tr>
+    <tr wicket:id="list.different_batch">
+      <td wicket:id="label.catalog">FIXME</td>
+      <td wicket:id="label.batch1">FIXME</td>
+      <td wicket:id="label.batch2">FIXME</td>
+      <td wicket:id="label.count">FIXME</td>
+    </tr>
+  </table>
+  
+</wicket:extend>
+</html>
