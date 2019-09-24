@@ -20,6 +20,7 @@
 package cz.insophy.retrobi.panel.card.navigator;
 
 import org.apache.wicket.Component;
+import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.AbstractLink;
@@ -114,7 +115,7 @@ public class SearchNavigatorPanel extends AbstractCardNavigatorPanel {
         // place components
         
         this.addInfoComponents();
-        this.addFormComponents();
+        this.addFormComponents(page.getPageParameters());
         this.addNavigationLinks();
     }
     
@@ -154,12 +155,15 @@ public class SearchNavigatorPanel extends AbstractCardNavigatorPanel {
     
     /**
      * Adds form components.
+     *
+     * @param pageParameters
+     * page parameters
      */
-    private void addFormComponents() {
+    private void addFormComponents(final PageParameters pageParameters) {
         // create components
         
         final WebMarkupContainer wrapper = this.createNonCompactWrapper("wrap.form", this.getViewSettings());
-        final CardSearchForm form = new CardSearchForm("form", this.mutableQuery);
+        final CardSearchForm form = new CardSearchForm("form", this.mutableQuery, pageParameters);
         
         // place components
         
