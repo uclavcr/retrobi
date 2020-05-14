@@ -163,11 +163,7 @@ public class RetrobiWebApplication extends WebApplication {
      * URL parameter: auto-login password
      */
     public static final String PARAM_AUTO_PASSWORD_HASH = "heslo";
-    /**
-     * public-facing URL
-     */
-    public static final String PUBLIC_URL = "http://retrobi.ucl.cas.cz/";
-    
+
     // ========
     // SETTINGS
     // ========

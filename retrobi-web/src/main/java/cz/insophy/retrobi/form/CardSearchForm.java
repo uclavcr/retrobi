@@ -25,6 +25,7 @@ import java.util.Map.Entry;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import cz.insophy.retrobi.Settings;
 import org.apache.wicket.Component;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.ComponentTag;
@@ -41,7 +42,6 @@ import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
-import cz.insophy.retrobi.RetrobiWebApplication;
 import cz.insophy.retrobi.RetrobiWebSession;
 import cz.insophy.retrobi.database.entity.type.AbstractCardIndex;
 import cz.insophy.retrobi.database.entity.type.CardState;
@@ -421,7 +421,7 @@ public class CardSearchForm extends Form<Object> {
                 newPageParameters.put(PARAM_IS_SENSITIVE, YES_FLAG);
             }
 
-            return RetrobiWebApplication.PUBLIC_URL + component.urlFor(SearchPage.class, newPageParameters).toString();
+            return Settings.SERVER_URL_FOR_EMAIL + component.urlFor(SearchPage.class, newPageParameters).toString();
         }
     }
 }
