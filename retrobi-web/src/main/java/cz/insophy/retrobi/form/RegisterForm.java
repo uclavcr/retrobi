@@ -23,12 +23,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.wicket.Component;
+import org.apache.wicket.extensions.markup.html.captcha.CaptchaImageResource;
 import org.apache.wicket.markup.html.form.CheckBox;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.image.Image;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.protocol.http.RequestUtils;
@@ -59,6 +62,10 @@ public class RegisterForm extends Form<Object> {
      * default serial version
      */
     private static final long serialVersionUID = 1L;
+    /**
+     * random captcha string length
+     */
+    private static final int CAPTCHA_LENGTH = 5;
     /**
      * list of predefined values for user "type" property
      */
@@ -142,6 +149,18 @@ public class RegisterForm extends Form<Object> {
      * agree with the rules
      */
     private final IModel<Boolean> agree;
+    /**
+     * captcha model
+     */
+    private final IModel<String> captcha;
+    /**
+     * correct captcha value
+     */
+    private final IModel<String> captchaContent;
+    /**
+     * captcha image resource
+     */
+    private final CaptchaImageResource captchaImageSource;
     
     /**
      * Creates a new instance.
@@ -160,6 +179,9 @@ public class RegisterForm extends Form<Object> {
         this.branch = Model.of(RegisterForm.DEFAULT_PRESET);
         this.alma = Model.of(RegisterForm.DEFAULT_PRESET);
         this.agree = Model.of(false);
+        this.captcha = Model.of("");
+        this.captchaContent = Model.of("");
+        this.captchaImageSource = new CaptchaImageResource(this.captchaContent);
         
         final String rules = RetrobiApplication.db().getTextRepository().getText(TextType.S_RULES);
         
@@ -172,6 +194,17 @@ public class RegisterForm extends Form<Object> {
         final DropDownChoice<String> almaSelect = new DropDownChoice<String>("select.alma", this.alma, RegisterForm.PRESET_ALMA);
         final TextArea<String> rulesField = new TextArea<String>("rules", Model.of(rules));
         final CheckBox agreeCheck = new CheckBox("agree", this.agree);
+        final TextField<String> captchaField = new TextField<String>("input.captcha", this.captcha);
+        final Image captchaImage = new Image("image.captcha", this.captchaImageSource);
+
+        final Component resetLink = new Link<Object>("link.reset") {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            public void onClick() {
+                resetCaptcha();
+            }
+        };
         
         // setup components
         
@@ -182,6 +215,11 @@ public class RegisterForm extends Form<Object> {
         almaSelect.setLabel(Model.of("Škola či pracoviště"));
         rulesField.setLabel(Model.of("Pravidla"));
         agreeCheck.setLabel(Model.of("Souhlas s pravidly"));
+        this.captchaImageSource.setCacheable(false);
+        this.add(resetLink);
+        captchaField.setLabel(Model.of("Spam ochrana"));
+        captchaField.setRequired(true);
+        captchaField.add(StringValidator.exactLength(CAPTCHA_LENGTH));
         
         // place components
         
@@ -192,6 +230,12 @@ public class RegisterForm extends Form<Object> {
         this.add(almaSelect);
         this.add(rulesField);
         this.add(agreeCheck);
+        this.add(captchaField);
+        this.add(captchaImage);
+
+        // reset captcha
+
+        this.resetCaptcha();
         
         // add validators
         
@@ -223,6 +267,14 @@ public class RegisterForm extends Form<Object> {
     protected void onSubmit() {
         if (RetrobiWebSession.get().hasRoleAtLeast(UserRole.USER)) {
             this.error("Přihlášený uživatel nemůže provést registraci.");
+            return;
+        }
+
+        // validate captcha
+
+        if (!this.captcha.getObject().equals(this.captchaContent.getObject())) {
+            this.error("Přepiště prosím ochranu proti spamu.");
+            this.resetCaptcha();
             return;
         }
         
@@ -266,6 +318,10 @@ public class RegisterForm extends Form<Object> {
             this.info("Registrace proběhla úspěšně. Na e-mail Vám byly zaslány registrační informace. E-mail si přečtěte a přihlašte se.");
         } catch (final GeneralOperationException x) {
             this.error(x.getMessage());
+        } finally {
+            // reset captcha in all cases
+
+            this.resetCaptcha();
         }
     }
     
@@ -322,5 +378,13 @@ public class RegisterForm extends Form<Object> {
         autologinUrlFixed = autologinUrlFixed.replace("http://localhost:8080/", Settings.SERVER_URL_FOR_EMAIL);
         autologinUrlFixed = autologinUrlFixed.replace("http://localhost/", Settings.SERVER_URL_FOR_EMAIL);
         return autologinUrlFixed;
+    }
+
+    /**
+     * Resets the new random value to CAPTCHA and redraws the image.
+     */
+    private void resetCaptcha() {
+        this.captchaContent.setObject(SimpleStringUtils.getRandomString(CAPTCHA_LENGTH));
+        this.captchaImageSource.invalidate();
     }
 }
