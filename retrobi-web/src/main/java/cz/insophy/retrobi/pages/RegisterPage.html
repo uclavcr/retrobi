@@ -46,6 +46,16 @@
         <td><label><input wicket:id="agree" type="checkbox" /> Přečetl jsem si Pravidla užívání systému a souhlasím s nimi.</label></td>
       </tr>
       <tr>
+        <th rowspan="2">Spam ochrana:</th>
+        <td><img wicket:id="image.captcha" alt="zde bude CAPTCHA" /></td>
+      </tr>
+      <tr>
+        <td>
+          Přepište písmena sem: <input wicket:id="input.captcha" size="10" />
+          <a wicket:id="link.reset">Jiný obrázek</a>
+        </td>
+      </tr>
+      <tr>
         <th>&nbsp;</th>
         <td><input type="submit" value="Zaregistrovat se" /></td>
       </tr>
